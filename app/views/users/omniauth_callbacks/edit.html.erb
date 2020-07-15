@@ -1,0 +1,11 @@
+<h2> Profile </h2>
+
+<%= form_tag '/sign_up_validation', method: :post do %>
+  <ul>
+    <% @user.errors.full_message.each do |error| %>
+      <li>
+        <%= error %>
+      </li>
+  </ul>
+    <% end %>
+<% end %>
