@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: {
     confirmations: 'confirmation',
-    omniauth_callbacks: 'users/omniauth_callbacks'
+    omniauth_callbacks: 'users/omniauth_callbacks',
+    registrations: 'registrations'
   }
-
+  
   post '/sign_up_validation', to: 'users/omniauth_callbacks#sign_up_validation'
 
   root 'welcome#index'
