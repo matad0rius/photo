@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :omniauthable, :omniauth_providers => [:facebook]
   has_one :payment
   accepts_nested_attributes_for :payment # registration new form
+  has_many :images
 
 
   def self.from_omniauth(auth)
